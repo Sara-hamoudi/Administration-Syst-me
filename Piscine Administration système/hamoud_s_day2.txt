@@ -1,0 +1,176 @@
+
+
+Question 01: Combien de classes réseau a-t-on dans le protocole IPv4 ?
+            -Pouvez-vous les citer ainsi que leur masque par défaut ?
+
+L'adresse IPv4  est un identifiant unique qui permet la reconnaissance d’un poste sur le réseau ,cette adresse peut être configurée de manière manuelle ou automatique,
+ elle est attribuée à toute interface réseau qui en fait la demande.
+
+ A/- Il existe 5 classes réseau dans le protocole IPv4 :
+
+La classe A :
+
+Le premier octet a une valeur comprise entre 1 et 126 ; soit un bit de poids fort égal à 0. Ce
+premier octet désigne le numéro de réseau (NetID) et les 3 autres correspondent à l'adresse de
+l'hôte (HostID). 
+
+La classe B :
+
+Le premier octet a une valeur comprise entre 128 et 191 ; soit 2 bits de poids fort égaux à 10. Les
+2 premiers octets désignent le numéro de réseau et les 2 autres correspondent à l'adresse de
+l'hôte. 
+
+La classe C :
+
+Le premier octet a une valeur comprise entre 192 et 223 ; soit 3 bits de poids fort égaux à 110.
+Les 3 premiers octets désignent le numéro de réseau et le dernier correspond à l'adresse de
+l'hôte. 
+
+La classe D :
+
+La classe D c'est une classe multicast.
+Le premier octet a une valeur comprise entre 224 et 239 ; soit 4 bits de poids fort égaux à 1110. Il
+s'agit d'une zone d'adresses dédiées aux services de multi-diffusion (multicast) vers des groupes
+d'hôtes (host groups). 
+
+
+La classe E :
+
+La classe E c'est une classe non implémenter et résever.
+Le premier octet a une valeur comprise entre 240 et 255 ; soit 4 bits de poids fort égaux à 1111.
+Il s'agit d'une zone d'adresses réservées à des opérations de maintenance et d’expérimentations.
+Ces adresses ne doivent pas être utilisées pour adresser des hôtes ou des groupes d'hôtes. 
+
+
+b/- On cite les masques de chaque classe : 
+
+A =>/8 => 255.0.0.0
+B =>/16 =>255.255.0.0
+C =>/24 => 255.255.255.0
+D => 240.0.0.0
+E => non défini	
+
+
+
+
+Question 02 :Quelles sont les adresses privées et réservées de chaque classe ?
+
+
+
+L’adresse IP Privée est une adresse qui ne fonctionne pas sur Internet et fonctionne uniquement sur les réseaux privés.
+Un réseau privé est un réseau qui utilise les plages d'adresses IP non accessibles depuis Internet (adresse privée), ce qui explique que les ordinateurs d'un réseau 
+privé ne sont donc pas directement accessibles depuis l'Internet, ce qui renforcerai la sécurité des ordinateurs. 
+Ces adresses sont utilisées au sein d’une organisation (entreprise, site, …) et permettent de communiquer localement sans consommer l’adresse IP.
+
+* L’adresse privée se retrouve dans chacune des classes A, B et C
+
+La classe A : comprend 16 millions d’adresses.
+Les adresses privées de la classe A : 10.0.0.0 à 10.255.255.255.
+
+La classe B : comprend 65535 adresses.
+Les adresses privées de la classe B : 172.16.0.0 à 172.31.255.255. 
+
+La classe C : comprend 256 adresses.
+Les adresses privées de la classe C : 192.168.1.0 à 192.168.255.255.
+
+*L'adresse réservée se retrouve dans les deux classes E et D
+
+La classe D : Les adresses de classe D sont utilisées pour les communications multicast. 
+Les réseaux disponibles en classe D sont donc les réseaux allant de l’adresse IP 224.0.0.0 à 239.255.255.255 (adresses de multicast).
+
+La classe E : Les adresses de classe E sont réservées par IANA ,Les adresses de classe E commencent toujours par la séquence de bits 1111,
+ils débutent donc en 240.0.0.0 et se terminent en 255.255.255.255.
+
+
+
+ Question 03 : Pour chaque réseau ci-dessous, veuillez donner la première adresse du réseau, la dernière adresse et l'adresse de broadcast
+
+-Voici Comment calculer l'adresse réseau avec les informations suivantes:
+
+L’adresse IP d’une machine est : 192.168.1.10 /24
+Le masque de mon réseau: 255.255.255.0
+
+On traduit en binaire :
+Adr ip de ma machine 11000000.10101000.00000001.00001010
+Masque du réseau---- 11111111.11111111.11111111.00000000
+
+On obtient l'adresse réseau en effectuant le ET Logique
+on obtient 11000000.10101000.00000001.00000000
+Soit: 192.168.1.0
+
+Une fois qu'on a trouvé l'adresse du réseau ,on cherche les zéros du masque sous réseau puis on additionne les valeurs des zéros aux séctions du réseau 
+dans cet exemple on a :
+réseau = 192.168.1.0 on ajoute les valeurs de zéros ce qui donne :
+ 192.168.1.0 
++ 0+0+0 +255
+=192.168.1.255
+
+donc l'adresse du boadcast est : 192.168.1.255
+
+- Maintenenat on passe aux calculs de l'adresse première et la dernière :
+
+Concernant la première adresse (c'est l'adresse qui vient juste aprés l'adresse du réseau ) on rajoute 1 à l'adresse du réseau :
+donc c'est 192.168.1.0 + 1 = 192.168.1.1
+Pour la dernière adresse ,on soustrait 1 pour l'adresse de broadcast : 192.168.1.255 -1 = 192.168.1.254
+
+
+
+ 
+
+1/- 192.168.1.10 /24
+  La première adresse :192.168.1.1
+  La dernière adresse :192.168.1.254
+  L'adresse de broadcast :192.168.1.255
+
+2/- 172.16.2.8 /24
+  La première adresse :172.16.2.1
+  La dernière adresse :172.16.2.254
+  L'adresse de broadcast :172.16.2.255
+
+3/- 10.0.0.8 /8
+  La première adresse :10.0.0.1
+  La dernière adresse :10.255.255.254
+  L'adresse de broadcast :10.255.255.255
+
+4/- 192.168.10.4 /30
+  La première adresse :192.168.10.5
+  La dernière adresse :192.168.10.6
+  L'adresse de broadcast :192.168.10.7
+
+5/- 172.16.1.10 /16
+  La première adresse :172.16.0.1
+  La dernière adresse :172.16.255.254
+  L'adresse de broadcast :172.16.255.255
+
+6/- 172.16.10.1 /30
+  La première adresse :172.16.10.1
+  La dernière adresse :172.16.10.2
+  L'adresse de broadcast :172.16.10.3
+
+7/- 192.168.1.25 /20
+  La première adresse :192.168.0.1
+  La dernière adresse :192.168.15.254
+  L'adresse de broadcast : 192.168.15.255
+
+8/- 10.0.10.20 /18
+  La première adresse :10.0.0.1
+  La dernière adresse :10.0.63.254
+  L'adresse de broadcast :10.0.63.255
+
+9/- 10.20.10.8 /26
+ La première adresse :10.20.10.1
+  La dernière adresse :10.20.10.62
+  L'adresse de broadcast :10.20.10.63
+
+10/- 192.168.25.3 /14
+ La première adresse :192.168.0.1
+  La dernière adresse :192.171.255.254
+  L'adresse de broadcast :192.171.255.255
+
+
+
+
+
+
+ 
+

@@ -1,0 +1,324 @@
+Question 01 : Découpez le réseau fourni en 4 sous-réseaux, et pour chacun d'eux, précisez :
+
+
+EXPLICATIONS :
+
+Tout d'abord ,on commence à chercher le masque sous-réseau (le nouveau masque )
+dans la première adressse on a :192.168.0.0 /24
+Le masque = 24 = 255.255.255.0
+Le nouveau masque = 255.255.255.192
+Maintenant on passe au calcul de nombre d'adresses disponibles 
+on sait que /24 contient huits zéros ce qui fait 1 octect  2^8 = 256 (le réseau contient 256 adresses disponibles) 
+On veut découpé le réseau en 4 sous-réseaux donc on divise le nombres d'adresse disponibles totale  par 4(256/4= 64).
+On déduit que chaque sous-réseau contient 64 adresses disponibles.
+-L'adresse réseau du premier sous-réseau c'est l'adresse du réseau (192.168.0.0)l'adresse la toute première .
+-L'adresse du premier utilisateur c'est celle qui vient juste après celle du réseau (192.168.0.1),pour l'obtenir il suffit
+juste de rajouter 1 à l'adresse du réseau .
+-Maintenant il nous reste 63 adresses disponibles (on soustrait juste l'adresse du réseau 64 - 1adr Rés).Donc l'adresse du
+broadcast c'est la toute dernière 192.168.0.63.
+-J'ai obtenu l'adresse du dernier utilisateur en faisant un -1 pour l'adresse du broadcast donc pour bien expliquer
+ c'est l'adresse avant la dernière .
+
+L'adresse IP est la suivante :  192.168.0.0 /24
+
+
+Premier sous -réseau : 
+
+IP Réseau =  192.168.0.0
+Première IP = 192.168.0.1
+Dernière IP = 192.168.0.62
+IP de Broadcast =  192.168.0.63
+
+Deuxième sous -réseau :
+
+Expliactions:
+
+J'ai utilisé exactement le meme principe que le premier sous-réseau .
+-Trouver l'adresse du réseau,justement c'est la première adresse qui vient juste 
+après l'adresse du broadcast .
+
+
+IP Réseau = 192.168.0.64
+Première IP = 192.168.0.65
+Dernière IP = 192.168.0.126
+IP de Broadcast = 192.168.0.127
+
+Troisième sous -réseau :
+
+IP Réseau = 192.168.0.128
+Première IP = 192.168.0.129
+Dernière IP = 192.168.0.190
+IP de Broadcast = 192.168.0.191
+
+Quatrième sous -réseau  :
+
+IP Réseau = 192.168.0.192
+Première IP = 192.168.0.193
+Dernière IP = 192.168.0.254
+IP de Broadcast + 192.168.0.255
+
+
+Question 02 : Découpez le réseau fourni en 16 sous-réseaux, et pour chacun d'eux, précisez :
+
+Les étapes ont bien été expliqué dans le première réponse ,j'ai utilisé la meme méthode .
+
+-Determiner l'adresse du réseau .
+-Calculer les adresses disponibles du réseau (2^32).
+-Découper en 16 sous-réseau .
+-Trouver les adressesdisponibles de chaque sous-réseau (2^32/16).
+
+IP Réseau
+Première IP
+Dernière IP
+IP de Broadcast
+
+L'adresse IP est la suivante : 10.0.0.0 /8
+
+Premier sous -réseau :
+
+IP Réseau = 10.0.0.0
+Première IP = 10.0.0.1
+Dernière IP = 10.0.0.254
+IP de Broadcast = 10.0.0.255
+
+Deuxième sous -réseau  : 
+
+IP Réseau =  10.32.0.0
+Première IP = 10.32.0.1
+Dernière IP =  10.63.255.255
+IP de Broadcast =  10.63.255.255
+
+Troisième sous -réseau  : 
+
+IP Réseau = 10.64.0.0
+Première IP = 10.64.0.0
+Dernière IP = 10.95.255.254
+IP de Broadcast = 10.95.255.255
+
+Quatrième sous -réseau  : 
+
+IP Réseau = 10.96.0.0
+Première IP = 10.96.0.1
+Dernière IP = 10.127.255.254
+IP de Broadcast = 10.127.255.255
+
+Cinquième réseau : 
+
+IP Réseau = 10.128.0.0
+Première IP = 10.128.0.1
+Dernière IP = 10.159.255.254
+IP de Broadcast = 10.159.255.255
+
+Sixième sous -réseau  :
+
+IP Réseau = 10.160.0.0
+Première IP = 10.160.0.1
+Dernière IP = 10.191.255.254
+IP de Broadcast = 10.191.255.255
+
+Septième sous -réseau  :
+
+IP Réseau = 10.192.0.0
+Première IP = 10.192.0.1
+Dernière IP =  10.223.255.254
+IP de Broadcast =  10.223.255.255
+
+Huitième sous -réseau  :
+
+IP Réseau = 10.224.0.0
+Première IP = 10.224.0.1
+Dernière IP = 10.255.255.254
+IP de Broadcast = 10.255.255.255
+
+Question 3 : 132.10.0.0 /16
+
+Découpez le réseau fourni en 8 sous-réseaux, et pour chacun d'eux, précisez :
+
+IP Réseau = 132.10.0.0
+Première IP = 132.10.0.1
+Dernière IP =  132.10.31.254
+IP de Broadcast =  132.10.31.255
+
+Sous -réseau  1 :
+
+IP Réseau = 132.10.0.0
+Première IP = 132.10.0.1
+Dernière IP =  132.10.31.254
+IP de Broadcast =  132.10.31.255
+
+Sous -réseau  2 :
+
+IP Réseau = 132.10.32.0
+Première IP = 132.10.32.1
+Dernière IP = 132.10.63.254
+IP de Broadcast = 132.10.63.255
+
+Sous -réseau 3 :
+
+IP Réseau = 132.10.64.0
+Première IP = 132.10.64.1
+Dernière IP = 132.10.95.254
+IP de Broadcast = 132.10.95.255
+
+Sous -réseau 4 : 
+
+IP Réseau = 132.10.96.0
+Première IP = 132.10.96.1
+Dernière IP = 132.10.127.254
+IP de Broadcast = 132.10.127.255
+
+Sous -réseau 5 :
+
+IP Réseau = 132.10.128.0
+Première IP = 132.10.128.1
+Dernière IP = 132.10.159.254
+IP de Broadcast = 132.10.159.255
+
+Sous -réseau 6 :
+
+IP Réseau =  132.10.160.0
+Première IP =  132.10.160.1
+Dernière IP = 132.10.191.254
+IP de Broadcast = 132.10.191.255
+
+Sous -réseau 7:
+
+IP Réseau = 132.10.192.0
+Première IP = 132.10.192.1
+Dernière IP = 132.10.223.254
+IP de Broadcast = 132.10.223.255
+
+Sous -réseau 8 :
+
+IP Réseau = 132.10.224.0
+Première IP = 132.10.224.1
+Dernière IP = 32.10.255.254
+IP de Broadcast = 32.10.255.255
+
+Question 04 :Découpez le réseau fourni en 16 sous-réseaux, et pour chacun d'eux, précisez :
+
+
+92.168.50.0 /24
+
+IP Réseau
+Première IP
+Dernière IP
+IP de Broadcast
+
+Sous -réseau  1:
+
+IP Réseau  =  92.168.50.0
+Première IP =  92.168.50.1
+Dernière IP =  92.168.50.14
+IP de Broadcast =  92.168.50.15
+
+Sous -réseau  2:
+
+IP Réseau = 92.168.50.16
+Première IP = 92.168.50.17
+Dernière IP =  92.168.50.30
+IP de Broadcas =  92.168.50.31
+
+Sous -réseau  3:
+
+IP Réseau = 92.168.50.32
+Première IP = 92.168.50.33
+Dernière IP = 92.168.50.46
+IP de Broadcas = 92.168.50.47
+
+Sous -réseau  4:
+
+IP Réseau = 92.168.50.48
+Première IP = 92.168.50.49
+Dernière IP =  92.168.50.62
+IP de Broadcas =  92.168.50.63
+
+Sous -réseau  5:
+
+IP Réseau = 92.168.50.64
+Première IP = 92.168.50.65
+Dernière IP = 92.168.50.78
+IP de Broadcas = 92.168.50.79
+
+Sous -réseau  6:
+
+IP Réseau = 92.168.50.80
+Première IP = 92.168.50.81
+Dernière IP = 92.168.50.94
+IP de Broadcas = 92.168.50.95
+
+Sous -réseau  7:
+
+IP Réseau = 92.168.50.96
+Première IP = 92.168.50.97
+Dernière IP = 92.168.50.110
+IP de Broadcas = 92.168.50.111
+
+Sous -réseau  8:
+
+IP Réseau = 92.168.50.112
+Première IP = 92.168.50.113
+Dernière IP =  92.168.50.126
+IP de Broadcas =  92.168.50.127
+
+Sous -réseau  9:
+
+IP Réseau =  92.168.50.128
+Première IP =  92.168.50.129
+Dernière IP =  92.168.50.142
+IP de Broadcas =  92.168.50.143
+
+Sous -réseau  10:
+
+IP Réseau =  92.168.50.144
+Première IP =  92.168.50.145
+Dernière IP = 92.168.50.158
+IP de Broadcas = 92.168.50.159
+
+Sous -réseau  11:
+
+IP Réseau = 92.168.50.160
+Première IP = 92.168.50.161
+Dernière IP =  92.168.50.174
+IP de Broadcas =  92.168.50.175
+
+Sous -réseau  12:
+
+IP Réseau = 92.168.50.176
+Première IP = 92.168.50.177
+Dernière IP = 92.168.50.190
+IP de Broadcas = 92.168.50.191
+
+Sous -réseau  13:
+
+IP Réseau = 92.168.50.192
+Première IP = 92.168.50.193
+Dernière IP =  92.168.50.206
+IP de Broadcas =  92.168.50.207
+
+Sous -réseau  14:
+
+IP Réseau = 92.168.50.208
+Première IP = 92.168.50.209
+Dernière IP = 92.168.50.222
+IP de Broadcas = 92.168.50.223
+
+Sous -réseau  15:
+
+IP Réseau = 92.168.50.224
+Première IP = 92.168.50.225
+Dernière IP = 92.168.50.238
+IP de Broadcas = 92.168.50.239
+
+Sous -réseau  16:
+
+IP Réseau = 92.168.50.240
+Première IP = 92.168.50.241
+Dernière IP =  92.168.50.254
+IP de Broadcas =  92.168.50.255
+
+
+
+
+
+

@@ -1,0 +1,192 @@
+Question 01 : Conversion de la base 2 vers la base 10.
+
+Explication :
+ 
+Le système binaire est fondé sur deux chiffres,le plus souvent c'est 0 et 1 .
+Le système Décimal  est fondé sur dix chiffres,de 0 à 9 . 
+
+Conversion de base 2 vers base 10: on utilise la méthode de multiplicaion(voici les étapes à suivre ) :
+
+Prenons le nombre  : 00101010. On voit qu'il s'étale sur 8 rangs, et sait que chaque rang correspond à une
+puissance de 2 : le premier (en partant de la droite) est le rang 0, le second est le rang 1, etc.
+
+Pour le convertir en décimal, on procède de la manière suivante : on multiplie par 2^0(2puissance 0) la valeur du rang 0, 
+par 2^1 la valeur du rang 1, par 2^2 la valeur du rang 2, […], par 2^10 la valeur du rang 10, etc.
+
+Pour notre nombre 00101010, on a donc  0×2^7 +  0×2^6 + 1×2^5 + 0×2^4 + 1×2^3 + 0×2^2 + 1×2^1 + 0×2^0  .
+Ensuite, il suffit simplement de remplacer les puissances de 2 par leurs valeurs et de faire la somme : 0×128 + 0×64 + 1×32 + 0×16 + 1×8 + 0×4 + 1×2 +  0×1 = 42.
+
+donc : ( 00101010)bin = (42)dec 
+
+
+
+010000000000 = 1024
+11111111 = 255
+001111111111 = 1023
+00101010 = 42
+01111111 = 127
+10101000 = 168
+
+
+
+Question 02: conversion de Décimale(base 10) au binaire ( base 2) 
+
+Explication :
+
+Conversion de base 10 vers la base 2 : Il s'agit de faire une suite de divisions euclidiennes par 2 ,le reste sera la juxtaposition
+des restes .
+
+*Les étapes à suivre sont les suivantes  :
+
+- Tout d'abord on prend notre nombre décimal .
+- On le divise par 2 et on note le reste de la division (c'est soit un 0  soit un 1).
+- On refait la même chose avec le quotient précedant ,et on met de nouveau le reste de coté.
+- On re-itère la division,et ce jusqu'à que le quotient est 0.
+- Le nombre binaire apparaît :le premier à placer est le dernier reste non nul.Ensuite,on remonte en plaçant les restes
+que l'on avait.On les place à droite du premier 1.
+
+Exemple : notre nombre est  32
+
+- 32 / 2 = 16 *2 + 0
+- 16 / 2 = 8 *2 + 0
+- 8 / 2 = 4 *2 + 0
+- 4 / 2 = 2 *2 + 0
+- 2 / 2 = 1 *2 + 0
+- 1 / 2 = 0 *2 + 1
+
+On voit apparaître le nombre binaire : Il faut lire de bas en haut ,ce qui donne  100000 .
+
+2031 = 11111101111
+28 = 11100
+32 = 100000
+250 = 11111010
+273 = 100010001
+42 = 101010
+255 = 11111111
+1024 = 10000000000
+
+Question 03 :Conversion de la base 10 vers la base 2(Binaire) puis la base 16(Héxadécimal)
+
+-Concernant la conversion du base 10 vers la base 2 ,cela à déja été expliqué en haut (question 2).
+
+-Le système Hexadécimal 
+Le système hexadécimal est fondé sur 16 caractères différents( Allant de 0,1,2,etc jusqu'à 9 ainsi que des lettres A,B,C,D,E et F )
+
+Prenons un nombre en binaire : 11111111.
+
+Je note que je l'ai séparé en blocs de 4 chiffres (comme on sépare les nombres en bloc de 2).
+
+Ceci nous simplifie la tache : en effet, on sait que 4 rangs binaires permettent de monter jusqu'à 15. Et bien, 1 rang en hexadécimal aussi 
+(Cela vient du fait que 24 (4 rangs en base 2) = 161 (1 rang en base 16)).
+
+De cette façon, 4 bits en binaire seront représentés par un rang en hexadécimal !
+
+Ainsi, le premier quadruplet : 1111 deviendra un seul rang en hexadécimal :
+1111 = 15 en décimal = F en hexadécimal. Le second quadruplet 1111 devient F en hexadécimal ; 
+
+Ainsi, (11111111)bin = (FF)hex.
+
+- On fait pareil pour les autres exemples :(prenant 10001 comme nombre binaire ,on le sépare en deux bolcs .On sait que 0001 représente 1 en hexadécimal et pour
+le deuxième bloc on rajoute trois zéros pour avoir 0001 qui fait 1 en hex .
+(10001)bin = (11) hex  
+
+17 = 10001 = 11
+92 = 1011100  = 5C
+6 = 110 = 6
+255 = 11111111 =FF
+1122 = 10001100010 = 462
+
+
+Question 04 : Conversion de la base 16(hexadécimal) vers la base 2(Binaire) puis la base 10(Décimal)
+
+Maintenant on explique la conversion du hexadécimal en binaire .
+j'ai fais les convertions en utilisant le tableau de convertion binaire-hexadécimal.
+
+Explications des exemples :
+
+- D'après le tableau ,on constate que 7 hexadécimal c'est 0111 en binaire et F hex c'est 1111 en binaire donc (7F) hex = (1111111) bin.
+- A hex présente 1010 bin ce qui donne que (AA) hex = (10101010) bin.
+- 1 hex donne 0001 BIN et A hex donne 1010 bin donc (1A) hex = (11010) bin.
+- F hex c'est 1111 bin donc (FF)hex = (11111111) bin.
+-2 hex 0010 bin e A donne 1010 bin donc :(2A) hex = 101010
+
+- Concernant la conversion de la base 2 vers la base 10 j'ai bien détaillé les explications dans question 1.
+7F = 1111111 = 127
+AA = 10101010  = 170
+1A = 11010 = 26
+FF = 11111111 = 255
+2A = 101010 = 42
+
+Question 05:
+
+On cite les 7 couches du modèle OSI et expliquez leur fonction:
+
+
+Le modèle OSI (Open Systems Interconnection) définit de quelle manière les ordinateurs
+et les périphériques en réseau doivent procéder pour communiquer :
+• il spécifie le comportement d'un système dit ouvert ;
+• les règles de communication constituent les protocoles normalisés ;
+• le modèle OSI est normalisé par l'ISO;
+
+- La couche physique:
+
+La couche physique s'occupe de la transmission des bits de façon brute sur un canal de
+communication. Cette couche doit garantir la parfaite transmission des données (un bit 1 envoyé
+doit bien être reçu comme bit valant 1). Concrètement, cette couche doit normaliser les
+caractéristiques électriques (un bit 1 doit être représenté par une tension de 5 V, par exemple), les
+caractéristiques mécaniques (forme des connecteurs, de la topologie...), les caractéristiques
+fonctionnelles des circuits de données et les procédures d'établissement, de maintien et de libération
+du circuit de données.
+
+-La couche de liaison:
+
+La couche liaison de données doit être capable de renvoyer une trame lorsqu'il y a eu un problème
+sur la ligne de transmission. De manière générale, un rôle important de cette couche est la détection
+et la correction d'erreurs intervenues sur la couche physique. Cette couche intègre également une
+fonction de contrôle de flux pour éviter l'engorgement du récepteur.
+
+-  La couche réseau:
+
+C'est la couche qui permet de gérer le sous-réseau, i.e. le routage des paquets sur ce sous-réseau et
+l'interconnexion des différents sous-réseaux entre eux. Au moment de sa conception, il faut bien
+déterminer le mécanisme de routage et de calcul des tables de routage (tables statiques ou
+dynamiques...).
+La couche réseau contrôle également l'engorgement du sous-réseau. On peut également y intégrer
+des fonctions de comptabilité pour la facturation au volume, mais cela peut être délicat.
+L'unité d'information de la couche réseau est le paquet.
+
+-  Couche transport:
+
+Cette couche est responsable du bon acheminement des messages complets au destinataire. Le rôle
+principal de la couche transport est de prendre les messages de la couche session, de les découper
+s'il le faut en unités plus petites et de les passer à la couche réseau, tout en s'assurant que les
+morceaux arrivent correctement de l'autre côté. Cette couche effectue donc aussi le réassemblage du
+message à la réception des morceaux.
+C'est l'une des couches les plus importantes, car c'est elle qui fournit le service de base à
+l'utilisateur, et c'est par ailleurs elle qui gère l'ensemble du processus de connexion, avec toutes les
+contraintes qui y sont liées.
+L'unité d'information de la couche réseau est le message.
+
+-  La couche session:
+
+Cette couche organise et synchronise les échanges entre tâches distantes. Elle réalise le lien entre les
+adresses logiques et les adresses physiques des tâches réparties. Elle établit également une liaison
+entre deux programmes d'application devant coopérer et commande leur dialogue (qui doit parler,
+qui parle...). Dans ce dernier cas, ce service d'organisation s'appelle la gestion du jeton. La couche
+session permet aussi d'insérer des points de reprise dans le flot de données de manière à pouvoir
+reprendre le dialogue après une panne.
+
+- La couche présentation :
+
+Cette couche s'intéresse à la syntaxe et à la sémantique des données transmises : c'est elle qui traite
+l'information de manière à la rendre compatible entre tâches communicantes. Elle va assurer
+l'indépendance entre l'utilisateur et le transport de l'information.
+Typiquement, cette couche peut convertir les données, les reformater, les crypter et les compresser.
+
+- La couche application:
+
+Cette couche est le point de contact entre l'utilisateur et le réseau. C'est donc elle qui va apporter à
+l'utilisateur les services de base offerts par le réseau, comme par exemple le transfert de fichier, la
+messagerie...
+
+
